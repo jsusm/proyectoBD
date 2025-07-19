@@ -254,7 +254,7 @@ create table OpcionValor
 	(id			INT		NOT NULL, 
 	idOpcion		INT		NOT NULL, 
 	nombre			NVARCHAR(50)	NOT NULL, 
-	precio_extra		DECIMAL(10,2)	NOT NULL	CHECK(precio_extra > 0),
+	precio_extra		DECIMAL(10,2)	NOT NULL,
 	PRIMARY KEY		(id, idOpcion),
 	CONSTRAINT fk_opcion2	FOREIGN KEY (idOpcion)	REFERENCES Opcion(id));
 
