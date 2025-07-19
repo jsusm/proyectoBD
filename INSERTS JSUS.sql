@@ -882,7 +882,341 @@ INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
 -- Plato 150: Pizza Cuatro Estaciones
 (150, 2, 1), (150, 1, 2), (150, 1, 3), (150, 1, 26);
 
--- Inserciones de datos para la tabla ComercioCocina
+-- Inserciones de datos para la tabla Comercio
+-- Se generan 40 comercios, 35 activos y 5 inactivos, con ubicaciones y horarios variados.
+INSERT INTO Comercio (id, password, telefono, fecha_registro, correo, nombre, ubicacion_fisica, hora_apertura, hora_cierre, estaActivo) VALUES
+(1, 'pass123', '555-1001', '2023-01-15', 'pizzaitalia@email.com', 'Pizza Italia', 'Av. Principal 123, Centro', '11:00:00', '22:00:00', 1),
+(2, 'pass123', '555-1002', '2023-02-20', 'burgermania@email.com', 'Burger Mania', 'Calle Falsa 456, El Sol', '12:00:00', '23:00:00', 1),
+(3, 'pass123', '555-1003', '2023-03-10', 'sushiexpress@email.com', 'Sushi Express', 'Blvd. Libertador 789, Las Flores', '13:00:00', '22:30:00', 1),
+(4, 'pass123', '555-1004', '2023-04-05', 'tacoslocos@email.com', 'Tacos Locos', 'Av. Siempre Viva 101, La Paz', '10:00:00', '21:00:00', 1),
+(5, 'pass123', '555-1005', '2023-05-12', 'pastafresca@email.com', 'Pasta Fresca', 'Carrera 5ta 202, El Bosque', '12:30:00', '22:00:00', 1),
+(6, 'pass123', '555-1006', '2023-06-01', 'elgourmet@email.com', 'El Gourmet', 'Plaza Mayor 303, Ciudad Vieja', '09:00:00', '18:00:00', 1),
+(7, 'pass123', '555-1007', '2023-07-08', 'saborasiatico@email.com', 'Sabor Asiático', 'Callejón Oscuro 404, El Puerto', '13:00:00', '23:00:00', 1),
+(8, 'pass123', '555-1008', '2023-08-19', 'dulceplacer@email.com', 'Dulce Placer', 'Av. Central 505, Los Pinos', '08:00:00', '20:00:00', 1),
+(9, 'pass123', '555-1009', '2023-09-25', 'veganworld@email.com', 'Vegan World', 'Ruta Verde 606, Eco Barrio', '11:00:00', '20:00:00', 1),
+(10, 'pass123', '555-1010', '2023-10-30', 'cafeexpress@email.com', 'Café Express', 'Paseo Peatonal 707, Centro', '07:00:00', '19:00:00', 1),
+(11, 'pass123', '555-1011', '2023-11-11', 'elrinconargentino@email.com', 'El Rincón Argentino', 'Calle del Tango 808, La Boca', '12:00:00', '23:00:00', 1),
+(12, 'pass123', '555-1012', '2023-12-05', 'mariscosdelmar@email.com', 'Mariscos del Mar', 'Av. Costanera 909, Playa Hermosa', '11:30:00', '22:00:00', 1),
+(13, 'pass123', '555-1013', '2024-01-22', 'laparrillada@email.com', 'La Parrillada', 'Camino Real 111, La Montaña', '12:00:00', '23:00:00', 1),
+(14, 'pass123', '555-1014', '2024-02-14', 'elhornodeleña@email.com', 'El Horno de Leña', 'Calle del Pan 222, El Pueblo', '09:00:00', '21:00:00', 1),
+(15, 'pass123', '555-1015', '2024-03-01', 'fastfoodking@email.com', 'Fast Food King', 'Av. Rápida 333, La Ciudad', '10:00:00', '00:00:00', 1),
+(16, 'pass123', '555-1016', '2024-04-18', 'saboresdemexico@email.com', 'Sabores de México', 'Calle Mariachi 444, El Centro', '11:00:00', '22:00:00', 1),
+(17, 'pass123', '555-1017', '2024-05-07', 'thegreencorner@email.com', 'The Green Corner', 'Parque Central 555, Jardines', '08:30:00', '19:30:00', 1),
+(18, 'pass123', '555-1018', '2024-06-21', 'wokmaster@email.com', 'Wok Master', 'Barrio Chino 666, Oriente', '13:00:00', '23:00:00', 1),
+(19, 'pass123', '555-1019', '2024-07-04', 'lapizzeriadelbarrio@email.com', 'La Pizzería del Barrio', 'Calle Vecinal 777, El Barrio', '17:00:00', '23:00:00', 1),
+(20, 'pass123', '555-1020', '2024-08-10', 'burgerpalace@email.com', 'Burger Palace', 'Av. Principal 888, Zona Comercial', '12:00:00', '23:00:00', 1),
+(21, 'pass123', '555-1021', '2024-09-01', 'sushilover@email.com', 'Sushi Lover', 'Calle del Sol 999, Centro', '13:00:00', '22:00:00', 1),
+(22, 'pass123', '555-1022', '2024-10-15', 'taqueriamexicana@email.com', 'Taquería Mexicana', 'Blvd. Central 1010, La Plaza', '10:30:00', '21:30:00', 1),
+(23, 'pass123', '555-1023', '2024-11-20', 'italianogourmet@email.com', 'Italiano Gourmet', 'Carrera del Arte 1111, La Cultura', '12:00:00', '22:00:00', 1),
+(24, 'pass123', '555-1024', '2024-12-03', 'elchefencasa@email.com', 'El Chef en Casa', 'Calle de la Cocina 1212, El Hogar', '09:00:00', '17:00:00', 1),
+(25, 'pass123', '555-1025', '2025-01-08', 'asianfusion@email.com', 'Asian Fusion', 'Av. Oriental 1313, Asia Town', '13:00:00', '23:00:00', 1),
+(26, 'pass123', '555-1026', '2025-02-28', 'sweetdelights@email.com', 'Sweet Delights', 'Calle de los Postres 1414, Dulce Hogar', '08:00:00', '20:00:00', 1),
+(27, 'pass123', '555-1027', '2025-03-17', 'greenbites@email.com', 'Green Bites', 'Ruta Ecológica 1515, Verde Vivo', '11:00:00', '20:00:00', 1),
+(28, 'pass123', '555-1028', '2025-04-01', 'coffeecorner@email.com', 'Coffee Corner', 'Paseo del Café 1616, Aroma', '07:30:00', '19:30:00', 1),
+(29, 'pass123', '555-1029', '2025-05-10', 'steakhouseprime@email.com', 'Steak House Prime', 'Av. Ganadera 1717, La Estancia', '12:00:00', '23:00:00', 1),
+(30, 'pass123', '555-1030', '2025-06-05', 'seafoodparadise@email.com', 'Seafood Paradise', 'Muelle 1818, Puerto Viejo', '11:00:00', '22:00:00', 1),
+(31, 'pass123', '555-1031', '2025-07-01', 'thegrillhouse@email.com', 'The Grill House', 'Calle del Fuego 1919, Brasa Viva', '12:00:00', '23:00:00', 1),
+(32, 'pass123', '555-1032', '2025-07-10', 'bakerydeluxe@email.com', 'Bakery Deluxe', 'Av. Panadera 2020, Masa Madre', '06:00:00', '18:00:00', 1),
+(33, 'pass123', '555-1033', '2025-07-15', 'pizzaworld@email.com', 'Pizza World', 'Calle Global 2121, El Mundo', '11:00:00', '23:00:00', 1),
+(34, 'pass123', '555-1034', '2025-07-18', 'burgerjoint@email.com', 'Burger Joint', 'Av. Sabor 2222, La Esquina', '12:00:00', '23:00:00', 1),
+(35, 'pass123', '555-1035', '2025-07-18', 'sushigarden@email.com', 'Sushi Garden', 'Jardín Oriental 2323, Zen', '13:00:00', '22:00:00', 1),
+(36, 'pass123', '555-1036', '2023-01-01', 'inactive1@email.com', 'Comercio Inactivo 1', 'Calle Inactiva 1, Zona Muerta', '09:00:00', '17:00:00', 0),
+(37, 'pass123', '555-1037', '2023-02-01', 'inactive2@email.com', 'Comercio Inactivo 2', 'Av. Olvidada 2, Pueblo Fantasma', '10:00:00', '18:00:00', 0),
+(38, 'pass123', '555-1038', '2023-03-01', 'inactive3@email.com', 'Comercio Inactivo 3', 'Blvd. Desierto 3, Arena Seca', '11:00:00', '19:00:00', 0),
+(39, 'pass123', '555-1039', '2023-04-01', 'inactive4@email.com', 'Comercio Inactivo 4', 'Ruta Perdida 4, Sin Destino', '12:00:00', '20:00:00', 0),
+(40, 'pass123', '555-1040', '2023-05-01', 'inactive5@email.com', 'Comercio Inactivo 5', 'Calle Solitaria 5, Eco Vacío', '13:00:00', '21:00:00', 0);
+
+
+-- Inserciones de datos para la tabla Menu
+-- Cada comercio tiene al menos un menú. Se generan 40 menús, uno por cada comercio.
+INSERT INTO Menu (id, nombre, descripcion, idComercio) VALUES
+(1, 'Menú Principal', 'Menú completo con las especialidades de Pizza Italia.', 1),
+(2, 'Menú Principal', 'Menú con todas las opciones de hamburguesas y acompañamientos de Burger Mania.', 2),
+(3, 'Menú de Sushi', 'Amplia variedad de sushi, sashimi y rolls frescos.', 3),
+(4, 'Menú de Tacos', 'Auténticos tacos mexicanos y antojitos.', 4),
+(5, 'Menú de Pastas', 'Pastas frescas hechas en casa con diversas salsas.', 5),
+(6, 'Menú Ejecutivo', 'Opciones de almuerzo y cena gourmet.', 6),
+(7, 'Menú Asiático', 'Platos tradicionales y fusión de Asia.', 7),
+(8, 'Menú de Postres', 'Variedad de dulces y postres artesanales.', 8),
+(9, 'Menú Vegano', 'Opciones 100% veganas y saludables.', 9),
+(10, 'Menú de Cafetería', 'Cafés, tés, y acompañamientos para el desayuno y la merienda.', 10),
+(11, 'Menú de Parrilla', 'Cortes de carne argentinos a la parrilla.', 11),
+(12, 'Menú de Mariscos', 'Lo mejor del mar en platos frescos y elaborados.', 12),
+(13, 'Menú de Carnes', 'Variedad de carnes a la brasa y guarniciones.', 13),
+(14, 'Menú de Panadería', 'Panes artesanales y productos de horno.', 14),
+(15, 'Menú Rápido', 'Comida rápida para llevar o comer en el local.', 15),
+(16, 'Menú Tradicional Mexicano', 'Platos típicos de la gastronomía mexicana.', 16),
+(17, 'Menú Saludable', 'Opciones ligeras y nutritivas.', 17),
+(18, 'Menú Wok', 'Platos salteados al wok con ingredientes frescos.', 18),
+(19, 'Menú de Pizzas', 'Todas las pizzas clásicas y especiales de la casa.', 19),
+(20, 'Menú de Hamburguesas', 'Variedad de hamburguesas con ingredientes premium.', 20),
+(21, 'Menú de Sushi Clásico', 'Selección de sushi tradicional japonés.', 21),
+(22, 'Menú de Antojitos', 'Antojitos mexicanos y especialidades de la taquería.', 22),
+(23, 'Menú de Especialidades Italianas', 'Platos italianos auténticos y gourmet.', 23),
+(24, 'Menú de Autor', 'Platos creativos y de alta cocina.', 24),
+(25, 'Menú Fusión Asiática', 'Combinación de sabores y técnicas culinarias de Asia.', 25),
+(26, 'Menú de Repostería', 'Postres y dulces para toda ocasión.', 26),
+(27, 'Menú Vegetariano', 'Opciones frescas y vegetarianas.', 27),
+(28, 'Menú de Bebidas y Snacks', 'Bebidas frías, calientes y aperitivos.', 28),
+(29, 'Menú Premium de Carnes', 'Cortes de carne selectos y madurados.', 29),
+(30, 'Menú de Pescados y Mariscos', 'Variedad de pescados frescos y mariscos.', 30),
+(31, 'Menú a la Brasa', 'Platos cocinados a la brasa con sabor ahumado.', 31),
+(32, 'Menú de Panadería y Pastelería', 'Productos de panadería y pastelería fresca.', 32),
+(33, 'Menú de Pizzas Variadas', 'Amplia selección de pizzas para todos los gustos.', 33),
+(34, 'Menú de Burgers Gourmet', 'Hamburguesas con combinaciones únicas y gourmet.', 34),
+(35, 'Menú de Sushi Contemporáneo', 'Sushi moderno y rolls creativos.', 35),
+(36, 'Menú Básico', 'Menú limitado para comercio inactivo.', 36),
+(37, 'Menú Básico', 'Menú limitado para comercio inactivo.', 37),
+(38, 'Menú Básico', 'Menú limitado para comercio inactivo.', 38),
+(39, 'Menú Básico', 'Menú limitado para comercio inactivo.', 39),
+(40, 'Menú Básico', 'Menú limitado para comercio inactivo.', 40);
+
+
+-- Inserciones de datos para la tabla Seccion
+-- Cada menú tiene al menos 5 secciones.
+INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
+-- Menú 1 (Comercio 1: Pizza Italia)
+(1, 'Pizzas Clásicas', 'Nuestras pizzas tradicionales con los sabores de siempre.', 1),
+(2, 'Pizzas Especiales', 'Creaciones únicas de la casa con ingredientes selectos.', 1),
+(3, 'Ensaladas', 'Opciones frescas y ligeras para acompañar.', 1),
+(4, 'Bebidas', 'Refrescos, jugos y cervezas.', 1),
+(5, 'Postres', 'Dulces para cerrar tu comida.', 1),
+-- Menú 2 (Comercio 2: Burger Mania)
+(6, 'Hamburguesas de Res', 'Jugosas hamburguesas de carne de res.', 2),
+(7, 'Hamburguesas de Pollo', 'Opciones de pollo crujiente o a la parrilla.', 2),
+(8, 'Hamburguesas Vegetarianas', 'Alternativas sin carne, llenas de sabor.', 2),
+(9, 'Acompañamientos', 'Patatas fritas, aros de cebolla y más.', 2),
+(10, 'Bebidas', 'Refrescos y batidos.', 2),
+-- Menú 3 (Comercio 3: Sushi Express)
+(11, 'Nigiri y Sashimi', 'Selección de cortes frescos de pescado.', 3),
+(12, 'Rolls Clásicos', 'Los rolls más populares y tradicionales.', 3),
+(13, 'Rolls Especiales', 'Creaciones únicas con combinaciones atrevidas.', 3),
+(14, 'Entradas', 'Edamame, gyozas y otros aperitivos.', 3),
+(15, 'Bebidas', 'Té verde, refrescos y cervezas japonesas.', 3),
+-- Menú 4 (Comercio 4: Tacos Locos)
+(16, 'Tacos de Pastor', 'El sabor auténtico de los tacos al pastor.', 4),
+(17, 'Tacos de Carnitas y Asada', 'Variedad de tacos con carnes tradicionales.', 4),
+(18, 'Antojitos', 'Quesadillas, sopes y más.', 4),
+(19, 'Salsas', 'Variedad de salsas para acompañar tus tacos.', 4),
+(20, 'Bebidas Mexicanas', 'Aguas frescas y refrescos.', 4),
+-- Menú 5 (Comercio 5: Pasta Fresca)
+(21, 'Pastas Largas', 'Spaghetti, fettuccine y linguine.', 5),
+(22, 'Pastas Cortas y Rellenas', 'Penne, ravioles y gnocchi.', 5),
+(23, 'Salsas', 'Salsas clásicas como pomodoro, alfredo y pesto.', 5),
+(24, 'Ensaladas', 'Ensaladas frescas para acompañar.', 5),
+(25, 'Postres Italianos', 'Tiramisú, panna cotta y más.', 5),
+-- Menú 6 (Comercio 6: El Gourmet)
+(26, 'Entradas Gourmet', 'Aperitivos selectos y sofisticados.', 6),
+(27, 'Platos Principales', 'Opciones de carnes y pescados con guarniciones.', 6),
+(28, 'Ensaladas de Autor', 'Ensaladas creativas con ingredientes frescos.', 6),
+(29, 'Postres Finos', 'Creaciones de repostería de alta calidad.', 6),
+(30, 'Vinos', 'Selección de vinos para maridar.', 6),
+-- Menú 7 (Comercio 7: Sabor Asiático)
+(31, 'Sopas y Entradas', 'Sopas tradicionales y aperitivos asiáticos.', 7),
+(32, 'Platos con Arroz', 'Arroces fritos y especialidades.', 7),
+(33, 'Platos con Fideos', 'Noodles salteados y sopas de fideos.', 7),
+(34, 'Curries', 'Curries tailandeses y de la India.', 7),
+(35, 'Bebidas Asiáticas', 'Tés y refrescos orientales.', 7),
+-- Menú 8 (Comercio 8: Dulce Placer)
+(36, 'Tartas y Pasteles', 'Variedad de tartas y pasteles caseros.', 8),
+(37, 'Postres Individuales', 'Porciones de postres para disfrutar.', 8),
+(38, 'Helados y Malteadas', 'Opciones frías y cremosas.', 8),
+(39, 'Bebidas Calientes', 'Cafés, tés y chocolates.', 8),
+(40, 'Bebidas Frías', 'Jugos y refrescos.', 8),
+-- Menú 9 (Comercio 9: Vegan World)
+(41, 'Platos Fuertes Veganos', 'Opciones de platos principales 100% vegetales.', 9),
+(42, 'Ensaladas Veganas', 'Ensaladas frescas y nutritivas.', 9),
+(43, 'Sopas y Cremas Veganas', 'Opciones calientes y saludables.', 9),
+(44, 'Postres Veganos', 'Dulces sin ingredientes de origen animal.', 9),
+(45, 'Bebidas Naturales', 'Jugos y batidos naturales.', 9),
+-- Menú 10 (Comercio 10: Café Express)
+(46, 'Cafés Calientes', 'Espresso, cappuccino, latte y más.', 10),
+(47, 'Cafés Fríos', 'Iced coffee, frappuccinos.', 10),
+(48, 'Tés e Infusiones', 'Variedad de tés y tisanas.', 10),
+(49, 'Bocadillos', 'Sándwiches, tostadas y bollería.', 10),
+(50, 'Postres Pequeños', 'Galletas, muffins y brownies.', 10),
+-- Menú 11 (Comercio 11: El Rincón Argentino)
+(51, 'Cortes de Res', 'Los mejores cortes de carne argentina.', 11),
+(52, 'Achuras', 'Mollejas, chorizos y morcillas.', 11),
+(53, 'Guarniciones', 'Patatas, ensaladas y verduras asadas.', 11),
+(54, 'Empanadas', 'Empanadas argentinas caseras.', 11),
+(55, 'Postres Típicos', 'Flan mixto, panqueques con dulce de leche.', 11),
+-- Menú 12 (Comercio 12: Mariscos del Mar)
+(56, 'Ceviches', 'Ceviches frescos de pescado y mariscos.', 12),
+(57, 'Platos Fuertes del Mar', 'Pescados y mariscos a la plancha o fritos.', 12),
+(58, 'Sopas y Cremas Marinas', 'Sopas y cremas con sabor a mar.', 12),
+(59, 'Entradas Marinas', 'Cocteles de camarones, ostras.', 12),
+(60, 'Bebidas', 'Refrescos, cervezas y vinos.', 12),
+-- Menú 13 (Comercio 13: La Parrillada)
+(61, 'Carnes Rojas', 'Cortes de res a la parrilla.', 13),
+(62, 'Carnes Blancas', 'Pollo y cerdo a la parrilla.', 13),
+(63, 'Parrilladas Mixtas', 'Combinaciones de carnes y embutidos.', 13),
+(64, 'Guarniciones', 'Patatas, arepas, ensaladas.', 13),
+(65, 'Bebidas', 'Refrescos y cervezas.', 13),
+-- Menú 14 (Comercio 14: El Horno de Leña)
+(66, 'Panes Artesanales', 'Variedad de panes hechos en horno de leña.', 14),
+(67, 'Focaccias y Pizzetas', 'Opciones ligeras y sabrosas.', 14),
+(68, 'Dulces de Horno', 'Galletas, magdalenas y bizcochos.', 14),
+(69, 'Bebidas Calientes', 'Café, chocolate y té.', 14),
+(70, 'Bebidas Frías', 'Jugos naturales y refrescos.', 14),
+-- Menú 15 (Comercio 15: Fast Food King)
+(71, 'Combos de Hamburguesas', 'Combos con hamburguesa, patatas y bebida.', 15),
+(72, 'Sándwiches y Wraps', 'Opciones rápidas y variadas.', 15),
+(73, 'Nuggets y Tiras de Pollo', 'Opciones de pollo frito.', 15),
+(74, 'Bebidas Gaseosas', 'Refrescos de máquina.', 15),
+(75, 'Postres Helados', 'Helados suaves y sundaes.', 15),
+-- Menú 16 (Comercio 16: Sabores de México)
+(76, 'Platos Fuertes Mexicanos', 'Enchiladas, chiles rellenos, mole.', 16),
+(77, 'Sopas y Caldos', 'Sopa de tortilla, pozole.', 16),
+(78, 'Postres Mexicanos', 'Flan, churros.', 16),
+(79, 'Bebidas Tradicionales', 'Aguas frescas, horchata.', 16),
+(80, 'Especialidades del Chef', 'Platos únicos y de temporada.', 16),
+-- Menú 17 (Comercio 17: The Green Corner)
+(81, 'Ensaladas Verdes', 'Ensaladas frescas con vegetales de hoja.', 17),
+(82, 'Bowls Saludables', 'Bowls con granos, proteínas y vegetales.', 17),
+(83, 'Smoothies y Jugos', 'Bebidas naturales y energéticas.', 17),
+(84, 'Snacks Saludables', 'Frutas, frutos secos y barras energéticas.', 17),
+(85, 'Opciones Veganas', 'Platos 100% vegetales.', 17),
+-- Menú 18 (Comercio 18: Wok Master)
+(86, 'Wok de Pollo', 'Pollo salteado con vegetales y fideos/arroz.', 18),
+(87, 'Wok de Res', 'Res salteada con vegetales y fideos/arroz.', 18),
+(88, 'Wok de Camarones', 'Camarones salteados con vegetales y fideos/arroz.', 18),
+(89, 'Sopas Orientales', 'Sopa wonton, sopa agripicante.', 18),
+(90, 'Bebidas Orientales', 'Té de jazmín, refrescos asiáticos.', 18),
+-- Menú 19 (Comercio 19: La Pizzería del Barrio)
+(91, 'Pizzas Grandes', 'Pizzas de tamaño familiar.', 19),
+(92, 'Pizzas Individuales', 'Pizzas personales.', 19),
+(93, 'Calzones', 'Calzones rellenos y horneados.', 19),
+(94, 'Entradas', 'Palitos de ajo, ensaladas.', 19),
+(95, 'Bebidas', 'Refrescos y cervezas.', 19),
+-- Menú 20 (Comercio 20: Burger Palace)
+(96, 'Hamburguesas Premium', 'Hamburguesas con ingredientes de alta calidad.', 20),
+(97, 'Hamburguesas Clásicas', 'Las favoritas de siempre.', 20),
+(98, 'Opciones de Pollo', 'Sándwiches y tiras de pollo.', 20),
+(99, 'Acompañamientos Especiales', 'Patatas con queso, aros de cebolla gourmet.', 20),
+(100, 'Malteadas', 'Malteadas cremosas de diferentes sabores.', 20),
+-- Menú 21 (Comercio 21: Sushi Lover)
+(101, 'Rolls Tradicionales', 'California, Filadelfia, Spicy Tuna.', 21),
+(102, 'Nigiri y Sashimi', 'Selección de pescados frescos.', 21),
+(103, 'Temakis', 'Conos de alga nori rellenos.', 21),
+(104, 'Platos Calientes', 'Teriyaki, tempura.', 21),
+(105, 'Bebidas Japonesas', 'Sake, té verde, refrescos.', 21),
+-- Menú 22 (Comercio 22: Taquería Mexicana)
+(106, 'Tacos de Maíz', 'Tacos con tortillas de maíz.', 22),
+(107, 'Tacos de Harina', 'Tacos con tortillas de harina.', 22),
+(108, 'Burritos y Quesadillas', 'Opciones más grandes y rellenas.', 22),
+(109, 'Guarniciones', 'Frijoles, arroz, guacamole.', 22),
+(110, 'Aguas Frescas', 'Horchata, jamaica, tamarindo.', 22),
+-- Menú 23 (Comercio 23: Italiano Gourmet)
+(111, 'Antipastos', 'Entradas frías y calientes italianas.', 23),
+(112, 'Pastas Frescas', 'Pastas hechas en casa con salsas gourmet.', 23),
+(113, 'Risottos', 'Arroces cremosos con ingredientes de temporada.', 23),
+(114, 'Carnes y Pescados', 'Platos principales con un toque italiano.', 23),
+(115, 'Dolci', 'Postres italianos clásicos.', 23),
+-- Menú 24 (Comercio 24: El Chef en Casa)
+(116, 'Entradas de Autor', 'Aperitivos creativos del chef.', 24),
+(117, 'Platos Principales Exclusivos', 'Creaciones únicas y de temporada.', 24),
+(118, 'Guarniciones Especiales', 'Acompañamientos innovadores.', 24),
+(119, 'Postres de Diseño', 'Postres con presentaciones artísticas.', 24),
+(120, 'Bebidas Premium', 'Selección de bebidas de alta calidad.', 24),
+-- Menú 25 (Comercio 25: Asian Fusion)
+(121, 'Dim Sum y Dumplings', 'Variedad de bocadillos al vapor o fritos.', 25),
+(122, 'Noodles y Arroces', 'Platos de fideos y arroz con influencias diversas.', 25),
+(123, 'Platos Principales Asiáticos', 'Carnes y pescados con salsas exóticas.', 25),
+(124, 'Ensaladas Asiáticas', 'Ensaladas frescas con aderezos orientales.', 25),
+(125, 'Postres Asiáticos', 'Dulces tradicionales y modernos de Asia.', 25),
+-- Menú 26 (Comercio 26: Sweet Delights)
+(126, 'Tortas y Pasteles', 'Pasteles para celebraciones y porciones individuales.', 26),
+(127, 'Galletas y Brownies', 'Variedad de galletas y brownies caseros.', 26),
+(128, 'Cupcakes y Muffins', 'Pequeños dulces para cualquier momento.', 26),
+(129, 'Postres Fríos', 'Cheesecakes, mousses y gelatinas.', 26),
+(130, 'Bebidas para Acompañar', 'Cafés, tés y chocolates.', 26),
+-- Menú 27 (Comercio 27: Green Bites)
+(131, 'Ensaladas Personalizadas', 'Crea tu propia ensalada con ingredientes frescos.', 27),
+(132, 'Wraps y Sándwiches Saludables', 'Opciones ligeras y nutritivas.', 27),
+(133, 'Sopas y Cremas del Día', 'Sopas frescas y de temporada.', 27),
+(134, 'Postres Ligeros', 'Frutas, yogures y opciones bajas en calorías.', 27),
+(135, 'Bebidas Detox', 'Jugos verdes y desintoxicantes.', 27),
+-- Menú 28 (Comercio 28: Coffee Corner)
+(136, 'Espressos y Americanos', 'Cafés puros y clásicos.', 28),
+(137, 'Lattes y Cappuccinos', 'Cafés con leche y espuma.', 28),
+(138, 'Tés Fríos y Calientes', 'Variedad de tés e infusiones.', 28),
+(139, 'Bollería Fresca', 'Croissants, donas y panes dulces.', 28),
+(140, 'Sándwiches de Desayuno', 'Opciones para empezar el día.', 28),
+-- Menú 29 (Comercio 29: Steak House Prime)
+(141, 'Cortes Premium', 'Filetes, ribeye, t-bone.', 29),
+(142, 'Acompañamientos Clásicos', 'Patatas, espárragos, puré.', 29),
+(143, 'Salsas para Carnes', 'Salsas especiales para realzar el sabor.', 29),
+(144, 'Entradas de Parrilla', 'Chorizos, morcillas, provoleta.', 29),
+(145, 'Vinos Tintos', 'Selección de vinos para maridar con carnes.', 29),
+-- Menú 30 (Comercio 30: Seafood Paradise)
+(146, 'Pescados Frescos', 'Pescados del día a la plancha o al horno.', 30),
+(147, 'Mariscos Variados', 'Camarones, langostinos, calamares.', 30),
+(148, 'Paellas y Arroces Marinos', 'Arroces con mariscos y pescados.', 30),
+(149, 'Sopas y Cremas de Mariscos', 'Calderetas y cremas del mar.', 30),
+(150, 'Bebidas Refrescantes', 'Cervezas, vinos blancos y rosados.', 30),
+-- Menú 31 (Comercio 31: The Grill House)
+(151, 'Parrilla de Res', 'Cortes de res a la parrilla.', 31),
+(152, 'Parrilla de Pollo', 'Pechugas y muslos a la brasa.', 31),
+(153, 'Parrilla de Cerdo', 'Costillas y lomos de cerdo.', 31),
+(154, 'Vegetales a la Brasa', 'Vegetales frescos asados.', 31),
+(155, 'Salsas Caseras', 'Salsas especiales para la parrilla.', 31),
+-- Menú 32 (Comercio 32: Bakery Deluxe)
+(156, 'Panes Especiales', 'Panes de masa madre, baguettes.', 32),
+(157, 'Bollería Fina', 'Croissants, danesas, brioches.', 32),
+(158, 'Tartaletas y Quiches', 'Opciones saladas y dulces.', 32),
+(159, 'Cafés y Tés', 'Bebidas calientes para acompañar.', 32),
+(160, 'Postres Individuales', 'Mousses, éclairs, macarons.', 32),
+-- Menú 33 (Comercio 33: Pizza World)
+(161, 'Pizzas del Mundo', 'Pizzas con ingredientes de diferentes culturas.', 33),
+(162, 'Pizzas Gourmet', 'Combinaciones únicas y sofisticadas.', 33),
+(163, 'Pizzas Veganas', 'Opciones sin productos animales.', 33),
+(164, 'Entradas y Ensaladas', 'Complementos para tu pizza.', 33),
+(165, 'Bebidas Internacionales', 'Cervezas y refrescos de todo el mundo.', 33),
+-- Menú 34 (Comercio 34: Burger Joint)
+(166, 'Hamburguesas Clásicas', 'Las hamburguesas de siempre.', 34),
+(167, 'Hamburguesas Especiales', 'Creaciones de la casa con toques únicos.', 34),
+(168, 'Opciones de Pollo y Pescado', 'Alternativas a la carne.', 34),
+(169, 'Acompañamientos', 'Patatas, aros, ensaladas.', 34),
+(170, 'Bebidas y Batidos', 'Refrescos y batidos cremosos.', 34),
+-- Menú 35 (Comercio 35: Sushi Garden)
+(171, 'Rolls Frescos', 'Rolls con ingredientes frescos y de temporada.', 35),
+(172, 'Sashimi y Nigiri Premium', 'Cortes de pescado de la más alta calidad.', 35),
+(173, 'Platos Calientes Japoneses', 'Teriyakis, yakisobas.', 35),
+(174, 'Ensaladas Japonesas', 'Ensaladas con aderezos orientales.', 35),
+(175, 'Postres Japoneses', 'Mochis, dorayakis.', 35),
+-- Menú 36 (Comercio 36: Comercio Inactivo 1)
+(176, 'Sección Inactiva 1', 'Descripción de sección inactiva.', 36),
+(177, 'Sección Inactiva 2', 'Descripción de sección inactiva.', 36),
+(178, 'Sección Inactiva 3', 'Descripción de sección inactiva.', 36),
+(179, 'Sección Inactiva 4', 'Descripción de sección inactiva.', 36),
+(180, 'Sección Inactiva 5', 'Descripción de sección inactiva.', 36),
+-- Menú 37 (Comercio 37: Comercio Inactivo 2)
+(181, 'Sección Inactiva 1', 'Descripción de sección inactiva.', 37),
+(182, 'Sección Inactiva 2', 'Descripción de sección inactiva.', 37),
+(183, 'Sección Inactiva 3', 'Descripción de sección inactiva.', 37),
+(184, 'Sección Inactiva 4', 'Descripción de sección inactiva.', 37),
+(185, 'Sección Inactiva 5', 'Descripción de sección inactiva.', 37),
+-- Menú 38 (Comercio 38: Comercio Inactivo 3)
+(186, 'Sección Inactiva 1', 'Descripción de sección inactiva.', 38),
+(187, 'Sección Inactiva 2', 'Descripción de sección inactiva.', 38),
+(188, 'Sección Inactiva 3', 'Descripción de sección inactiva.', 38),
+(189, 'Sección Inactiva 4', 'Descripción de sección inactiva.', 38),
+(190, 'Sección Inactiva 5', 'Descripción de sección inactiva.', 38),
+-- Menú 39 (Comercio 39: Comercio Inactivo 4)
+(191, 'Sección Inactiva 1', 'Descripción de sección inactiva.', 39),
+(192, 'Sección Inactiva 2', 'Descripción de sección inactiva.', 39),
+(193, 'Sección Inactiva 3', 'Descripción de sección inactiva.', 39),
+(194, 'Sección Inactiva 4', 'Descripción de sección inactiva.', 39),
+(195, 'Sección Inactiva 5', 'Descripción de sección inactiva.', 39),
+-- Menú 40 (Comercio 40: Comercio Inactivo 5)
+(196, 'Sección Inactiva 1', 'Descripción de sección inactiva.', 40),
+(197, 'Sección Inactiva 2', 'Descripción de sección inactiva.', 40),
+(198, 'Sección Inactiva 3', 'Descripción de sección inactiva.', 40),
+(199, 'Sección Inactiva 4', 'Descripción de sección inactiva.', 40),
+(200, 'Sección Inactiva 5', 'Descripción de sección inactiva.', 40);
+
+-- Inserciones de datos para la tabla ComercijCocina
 -- Se asocian los comercios con las cocinas que ofrecen,
 -- asegurando que al menos el 30% de los comercios tengan dos o más cocinas.
 
@@ -916,7 +1250,6 @@ INSERT INTO ComercioCocina (idComercio, idCocina) VALUES
 (38, 24), -- Comercio Inactivo 3 -> Internacional
 (39, 24), -- Comercio Inactivo 4 -> Internacional
 (40, 24), -- Comercio Inactivo 5 -> Internacional
-
 -- Comercios con dos o más cocinas (12 comercios, 30% de 40)
 (2, 24), (2, 7),    -- Burger Mania -> Internacional, Parrilla
 (6, 26), (6, 24),   -- El Gourmet -> Gourmet, Internacional

@@ -11,7 +11,7 @@ create table Direccion
 	calle			NVARCHAR(50)	NOT NULL, 
 	municipio		NVARCHAR(25)	NOT NULL, 
 	alias			NVARCHAR(50)	NOT NULL, 
-	nombre_edif		NVARCHAR(25)	NOT NULL);
+	nombre_edif		NVARCHAR(50)	NOT NULL);
 
 -- Tabla 11:
 -- *********
